@@ -19,7 +19,7 @@ app.use(cors());
 
 
 
-app.use(products);
+app.use('/api/v1',products);
 app.use('/api/v1',orders);
 app.use(paymentRoutes);
 
