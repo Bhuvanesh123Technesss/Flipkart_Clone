@@ -15,7 +15,7 @@ export default function ProductDetailPage({cartItems, setCartItems}) {
     useEffect(() => {
       const fetchProduct = async () => {
         try{
-          const response = await fetch(`${import.meta.env.VITE_URL}/product/${id}`)
+          const response = await fetch(`${import.meta.env.VITE_URL}product/${id}`)
           //console.log("ID:",id);
           if(!response.ok){
             throw new Error("Network response not ok")
