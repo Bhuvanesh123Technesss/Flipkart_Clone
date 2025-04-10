@@ -1,0 +1,17 @@
+.footer {
+    background-color: #212121; /* Light gray background */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    color: #fbfcff; /* Dark text color */
+    font-size: 14px; /* Font size */
+}
+
+.footer-content p {
+    margin: 5px 0; /* Margin for paragraphs */
+}

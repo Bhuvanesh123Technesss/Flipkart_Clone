@@ -1,0 +1,32 @@
+/* styles.css */
+.number-control {
+  display: flex;
+  align-items: center;
+}
+
+.number-left,
+.number-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333333;
+  color: white;
+  border: 1px solid black;
+  width: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.number-left:hover,
+.number-right:hover {
+  background-color: #666666;
+}
+
+.number-quantity {
+  padding: 0.25rem;
+  border: 0;
+  width: 50px;
+  -moz-appearance: textfield;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}

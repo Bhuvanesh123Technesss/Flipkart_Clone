@@ -1,0 +1,15 @@
+.img-magnifier-container {
+    position: absolute;
+    left: 100vh;
+}
+
+.magnifier-img {
+    width: 100vh;
+    height: 100vh;
+}
+
+.magnifier-image {
+    width: 200px;
+    height: 200px;
+    border: 2px solid  #ffff;
+}
