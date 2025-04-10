@@ -3,10 +3,6 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 exports.createCheckoutSession = async (req, res) => {
     const { cartItems } = req.body;
 
-    const successUrl = process.env.NODE_ENV === 'production' 
-    ? 'https://flipkart-clone-frontend-snowy.vercel.app/success' 
-    : `${process.env.UI_PORT}/success`;
-
     const line_items = cartItems.map((item) => ({
         price_data: {
             currency: "inr",
@@ -24,7 +20,7 @@ exports.createCheckoutSession = async (req, res) => {
             line_items,
             mode: "payment",
             success_url: process.env.NODE_ENV === 'production' ? 'https://flipkart-clone-frontend-snowy.vercel.app/success' : `${process.env.UI_PORT}/success`, // your success page
-            cancel_url: process.env.NODE_ENV === 'production' ? 'https://flipkart-clone-frontend-snowy.vercel.app/success' : `${process.env.UI_PORT}/cancel`, // your cancel page  
+            cancel_url: process.env.NODE_ENV === 'production' ? 'https://flipkart-clone-frontend-snowy.vercel.app/cancel' : `${process.env.UI_PORT}/cancel`, // your cancel page  
         });
 
         res.json({ id: session.id });
