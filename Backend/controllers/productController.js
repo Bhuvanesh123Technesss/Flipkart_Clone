@@ -3,6 +3,7 @@ const productModel = require('../models/productModel');
 // Get products API - /api/v1/products
 exports.getProducts = async (req, res, next) => {
 
+    console.log("Received request for products");
     const query = req.query.keyword?{ name : {
         $regex: req.query.keyword,
         $options: 'i'
