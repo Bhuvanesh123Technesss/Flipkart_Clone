@@ -4,7 +4,7 @@ exports.createCheckoutSession = async (req, res) => {
     const { cartItems } = req.body;
 
     const successUrl = process.env.NODE_ENV === 'production' 
-    ? 'https://your-production-site.netlify.app/success' 
+    ? 'https://flipkart-clone-frontend-snowy.vercel.app/success' 
     : `${process.env.UI_PORT}/success`;
 
     const line_items = cartItems.map((item) => ({
@@ -23,8 +23,8 @@ exports.createCheckoutSession = async (req, res) => {
             payment_method_types: ["card"],
             line_items,
             mode: "payment",
-            success_url: process.env.NODE_ENV === 'production' ? 'https://your-production-site.netlify.app/success' : `${process.env.UI_PORT}/success`, // your success page
-            cancel_url: process.env.NODE_ENV === 'production' ? 'https://your-production-site.netlify.app/success' : `${process.env.UI_PORT}/cancel`, // your cancel page  
+            success_url: process.env.NODE_ENV === 'production' ? 'https://flipkart-clone-frontend-snowy.vercel.app/success' : `${process.env.UI_PORT}/success`, // your success page
+            cancel_url: process.env.NODE_ENV === 'production' ? 'https://flipkart-clone-frontend-snowy.vercel.app/success' : `${process.env.UI_PORT}/cancel`, // your cancel page  
         });
 
         res.json({ id: session.id });
