@@ -15,7 +15,13 @@ const paymentRoutes = require('./Routes/server');
 connectDatabase();   
 
 app.use(express.json());
-app.use(cors());
+//app.use(cors());
+
+// Allow requests from your frontend domain
+app.use(cors({
+    origin: 'https://flipkart-clone-frontend-15qzde7mj-bhuvaneshs-projects-b53b4614.vercel.app'
+}));
+
 app.use('/api/v1',products);
 app.use('/api/v1',orders);
 app.use(paymentRoutes);
