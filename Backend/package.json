@@ -6,7 +6,8 @@
     "start": "nodemon app.js",
     "dev": "set NODE_ENV=developement && nodemon app.js",
     "prod": "set NODE_ENV=production && nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "express.js build --output public"
   },
   "author": "Bhuvanesh A",
   "license": "ISC",
@@ -14,7 +15,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2",
+    "express": "^4.21.2",
     "mongoose": "^8.5.0",
     "nodemon": "^3.1.4",
     "stripe": "^18.0.0"

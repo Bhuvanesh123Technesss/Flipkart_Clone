@@ -27,6 +27,8 @@ app.listen(process.env.PORT, () => {
     console.log(`server is running at: ${process.env.PORT}\nstate: ${process.env.NODE_ENV} `);
 });
 
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
 app.get('/test', (req, res) => {
     res.send('Server is working!');
 });
