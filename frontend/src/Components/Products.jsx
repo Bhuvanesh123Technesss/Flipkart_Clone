@@ -31,13 +31,13 @@ export default function Products() {
             img : p1
         },
         {
-            id:"67f4cc8adb18122469607b93",
+            id:"67fc9c800f4693e0f7895cfd",
             name : "POCO C16",
             price : "10,999",
             img : p2
         },
         {
-            id:"67f4cc8adb18122469607b94",
+            id:"67fc9cc30f4693e0f7895cfe",
             name : "Motorola Edge 50 Fusion",
             price :"29,999" ,
             img : p3
