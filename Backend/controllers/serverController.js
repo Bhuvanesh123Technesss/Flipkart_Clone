@@ -19,8 +19,8 @@ exports.createCheckoutSession = async (req, res) => {
             payment_method_types: ["card"],
             line_items,
             mode: "payment",
-            success_url: process.env.NODE_ENV === 'PRODUCTION' ? 'https://flipkart-clone-frontend-snowy.vercel.app/success' : `${process.env.UI_PORT}/success`, // your success page
-            cancel_url: process.env.NODE_ENV === 'PRODUCTION' ? 'https://flipkart-clone-frontend-snowy.vercel.app/cancel' : `${process.env.UI_PORT}/cancel`, // your cancel page  
+            success_url: `${process.env.UI_PORT}/success`, // your success page
+            cancel_url: `${process.env.UI_PORT}/cancel`, // your cancel page  
         });
 
         res.json({ id: session.id });
