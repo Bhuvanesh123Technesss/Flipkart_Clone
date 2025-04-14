@@ -25,7 +25,7 @@ export default function Products() {
 
     let productList = [
         {
-            id:"67f4cc8adb18122469607b92",
+            id:"67fc9c250f4693e0f7895cfb",
             name : "Samsung Galaxy A16",
             price : "35,000",
             img : p1
